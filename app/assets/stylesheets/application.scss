@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans|Roboto+Condensed&display=swap');
+
+/*
+*= require simple_calendar
+*/
+
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+@import "components/banner";
+@import "pages/form";
+
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background-color: white;
+}
+
+.container{
+  color: black;
+  position: relative;
+  width: 80%;
+}
+
+.container_index{
+  padding-bottom: 100px;
+}
+
+.container a {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+table{
+  margin-top: 20px;
+  border: 0px;
+  border-radius: 0 0 20px 20px;
+}
+
+.center{
+ text-align: center;
+ margin: 5px;
+}
+
+h1{
+  text-align: center;
+  margin: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.check_boxes .form-check {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.img_edit{
+    width: 300px;
+}
+
+
+
+

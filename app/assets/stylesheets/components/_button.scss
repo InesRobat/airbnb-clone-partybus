@@ -1,0 +1,40 @@
+.button_slide {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border-radius: 4%;
+  padding: 10px 20px;
+  margin: 15px;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  background-image: linear-gradient(to right, #FF512F 0%, #F09819 100%, #FF512F 100%)
+  // background-color: #ffd200;
+  // cursor: pointer;
+  // box-shadow: inset 300px 0 0 0  #e60000;
+  // -webkit-transition: ease-out 1s;
+  // -moz-transition: ease-out 1s;
+  // transition: ease-out 1s;
+}
+
+.slide_right:hover {
+  // background-position: right center;
+  box-shadow: inset 400px 0 0 0  #FF512F;
+  color: white;
+}
+
+
+#outer {
+  width: 364px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 38px;
+  padding: 12px 6px;
+  border-radius: 1px;
+  background-image: linear-gradient(to right, #FF512F 0%, #F09819 100%, #FF512F 100%)
+}
+

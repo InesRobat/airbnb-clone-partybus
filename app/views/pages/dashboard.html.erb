@@ -1,0 +1,54 @@
+<div class="container">
+  <br>
+    <h1 style="text-align: center;font-family: Roboto Condensed; letter-spacing: 3px; text-transform: uppercase;"><%= current_user.name.upcase %>'s dashboard</h1>
+  <br>
+  <h4 style="text-transform: uppercase;font-size: 16px; color: #333132">My reservations</h4>
+
+
+  <div class="show_all">
+    <% @bookings.each do |b| %>
+    <%= link_to bus_booking_path(:id, b) do %>
+      <div class="card-trip">
+         <% if b.bus.photo.attached? %>
+            <%= cl_image_tag b.bus.photo.key, crop: :fill %>
+         <% end %>
+      <div class="card-trip-infos">
+      <div>
+        <h2><%= b.bus.name %></h2>
+        <p>From: <%= b.start_date.strftime("%B %d, %Y") %></p>
+        <p>To: <%= b.end_date.strftime("%B %d, %Y") %></p>
+        <p><% diff = (b.end_date - b.start_date) %></p>
+        <p><%= (diff / 1.day).round %> Days</p>
+      </div>
+
+    </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+  <h4 style="text-transform: uppercase; font-size: 16px; color: #333132"">My buses</h4>
+  <div class="show_all">
+  <% @buses.each do |bus| %>
+  <%= link_to bus do %>
+    <div class="card-trip">
+      <% if bus.photo.attached? %>
+        <%= cl_image_tag bus.photo.key, crop: :fill %>
+      <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= bus.name %></h2>
+          <p>Capacity: <%= bus.capacity %></p>
+          <p>Description: <%= bus.description %></p>
+          <p>Price: <%= bus.price %> $ per/nigth</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
+
+</div>

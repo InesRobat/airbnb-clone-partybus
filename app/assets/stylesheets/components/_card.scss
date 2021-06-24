@@ -1,0 +1,120 @@
+//--------index page cards----------//
+
+.show_all{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-trip {
+  color: black;
+  overflow: hidden;
+  background: white;
+  width: 310px;
+  margin: 5px;
+  box-shadow: 4px 6px 20px 2px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+
+img {
+  margin: 5px;
+  height: 300px;
+  width: 300px;
+  border-radius: 4px;
+}
+
+
+h2 {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Open Sans';
+}
+
+p {
+  color: black;
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip-infos {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos a {
+  float: left;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+.index_butt{
+  float: right;
+}
+
+  &:hover {
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 600px) {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+}
+
+//-------------show page card---------------//
+
+.show_card{
+  margin-top: 10%;
+  background: white;
+  text-align: center;
+  padding: 20px;
+
+  h2{
+    font-family: Roboto Condensed;
+    color: black;
+    padding: 20px 3px 3px 3px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  img{
+    margin: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+  .overall{
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    border-radius:2px;
+    margin-top: 20px;
+    padding: 5px 10px;
+  }
+
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+}
+

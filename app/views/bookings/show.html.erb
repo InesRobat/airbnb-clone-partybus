@@ -1,0 +1,28 @@
+<div class="container">
+  <br>
+
+  <div class="row justify-content-md-center show_card">
+    <div class="col-md-12 col-lg-6">
+      <% if @booking.bus.photo.attached? %>
+        <td><%= cl_image_tag @booking.bus.photo.key, crop: :fill %></td>
+      <% end %>
+    </div>
+    <div class="col-md-12 col-lg-6">
+
+    <h2><%= @booking.bus.name %></h2>
+    <p>From: <%= @booking.start_date.strftime("%B %d, %Y") %></p>
+    <p>To: <%= @booking.end_date.strftime("%B %d, %Y") %></p>
+      <hr>
+      <p><%= @booking.bus.description %></p>
+      <p>Capacity: <%= @booking.bus.capacity %> pers.</p>
+      <p><%= @booking.bus.price %>$ / per night</p>
+
+      <p></p>
+      <p><% diff = (@booking.end_date - @booking.start_date) %></p>
+      <p><%= (diff / 1.day).round %> Days</p>
+      <%= link_to 'Cancel this trip', bus_booking_path, method: :delete, data: {confirm: 'You are about to cancel this booking?' }, class: "button_slide slide_right" %>
+    </div>
+  </div>
+</div>
+
+

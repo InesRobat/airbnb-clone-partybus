@@ -1,0 +1,22 @@
+<div class="container container_index">
+<h3 class="center">Search Result</h3>
+      <div class="show_all">
+          <% @results.each do |result| %>
+          <%= link_to result do  %>
+          <div class="card-trip">
+             <% if result.photo.attached? %>
+               <%= cl_image_tag result.photo.key, crop: :fill %>
+              <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= result.name %></h2>
+                <p class="card-trip-pricing"><%= result.price %>$</p>
+                <%= link_to 'Book me!', new_bus_booking_path(result), class: "button_slide slide_right index_butt" %>
+              </div>
+              </div>
+              </div>
+      <% end %>
+    <% end %>
+  </div>
+  </div>
+
